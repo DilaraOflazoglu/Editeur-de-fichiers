@@ -1,0 +1,30 @@
+L’expression anglaise de data privacy fait référence à la façon dont les marques et 
+annonceurs gèrent la collecte et l’exploitation de données personnelles relatives à leurs 
+clients et prospects.
+
+La data privacy fait à la fois référence à des contraintes légales et à des problématiques 
+de déontologie et de transparence. Elle englobe également les problématiques de protection 
+des données collectées à l’égard d’éventuelles attaques extérieures.
+
+La question de la data privacy pouvait être confiée dans certains cas à un data privacy 
+officer. Cependant, depuis l’arrivée du GDPR on parle davantage de DPO ou délégué à la 
+protection des données dans le contexte européen.
+
+This article will stick to the American usage — but remember that if you are operating 
+globally, the terminology can get confusing.
+
+Data privacy and data protection are very closely interconnected, so much so that users 
+often think of them as synonymous. But the distinctions between data privacy vs. data 
+protection are fundamental to understanding how one complements the other. Privacy concerns 
+arise wherever personally identifiable information is collected, stored, or used.
+
+In a nutshell, data protection is about securing data against unauthorized access. Data 
+privacy is about authorized access — who has it and who defines it. Another way to look at 
+it is this: data protection is essentially a technical issue, whereas data privacy is a 
+legal one.
+
+These distinctions matter because they're woven deeply into the overarching issues of 
+privacy and cybersecurity, both of which loom large in businesses, politics and culture. 
+For industries subject to compliance standards, there are crucial legal implications 
+associated with privacy laws. And ensuring data protection may not adhere to every required 
+compliance standard.

@@ -1,0 +1,29 @@
+Just to make things more complicated, according to the Storage Networking 
+IndustryAssociation (SNIA), the laws and regulations that cover "the 
+management of personalinformation" are typically grouped under "privacy 
+policy" in the United States and under "protection policy" in the EU and 
+elsewhere. The European Union's General Data Protection Regulation (GDPR), a 
+supervisory authority that will go into effect May 25, 2018, requires 
+businesses to protect the "personal dataand privacy of EU citizens for 
+transactions that occur within the EU." However, the GDPR'sdata protection law 
+has a much different view of personal identification information thanthe US. 
+GDPR compliance requires that companies use the same level of data protection 
+forcookies as they do for stored personally identifiable information, such as 
+social securitynumbers.Make sure you are compliant with the GDPR. Download 
+this free guide.Privacy and Security: One Doesn't Ensure the OtherWhat's 
+important to understand when comparing data privacy vs. data protection is 
+that you can't ensure data privacy unless the personal data is protected by 
+technology. If someone can steal personal data, its privacy is not guaranteed, 
+which puts you at risk for identity theft and other personal security 
+breaches. But the opposite relationship isn't always true: personal data can 
+be protected while still not being reliably private.How? When you swipe your 
+credit card for a service provider, you're doing two things. First of all, 
+you're trusting the service provider and payment system with your personal 
+data protection - to make sure, among other things, shady cybercriminals and 
+other third parties can't access your credit information without your consent. 
+But you're also trusting them to honor your data privacy by not misusing the 
+information even though you provided it to them.The point is technology alone 
+cannot ensure the privacy of personal data. Most privacy protection protocols 
+are still vulnerable to authorized individuals who might ac cess the data. The 
+burden on these authorized individuals is, above all, about privacy law, not 
+technology. 
