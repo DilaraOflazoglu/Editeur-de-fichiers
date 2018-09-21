@@ -1,6 +1,8 @@
 #include "fonctions_connection.h"
 
 
+/* Fonction appelé pour créer une socket */
+/*****************************************/
 int creer_socket_tcp(char *chainePort){
 
 /* Variables socket Serveur */
@@ -36,6 +38,8 @@ int creer_socket_tcp(char *chainePort){
 }
 
 
+/* Fonction appelé pour accepter une connexion cliente */
+/*******************************************************/
 int accepter_connexion(int fdSockServer){
 
     int fdSockClient;   /* File dscriptor de la socket Client */
@@ -55,6 +59,8 @@ int accepter_connexion(int fdSockServer){
 }
 
 
+/* Fonction appelé pour fermer une socket */
+/*******************************************/
 void fermeture_socket_tcp(int fdSock){
 /* Fermeture socket Client */
     shutdown(fdSock, 2);

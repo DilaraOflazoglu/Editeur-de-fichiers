@@ -14,7 +14,6 @@
 
 /* Catch Signal Handler functio */
  void signal_callback_handler(int signum){
-
      printf("Caught signal SIGPIPE %d\n", signum);
 }
 
