@@ -1,7 +1,6 @@
 #include "fonctions_connection.h"
 
 
-//OK
 /* L'utilisateur se connecte a la socket du serveur */
 /****************************************************/
 int connection(char* addrIp, char *chainePort){
@@ -45,7 +44,7 @@ int connection(char* addrIp, char *chainePort){
     return fdSockServer;
 }
 
-//OK
+
 /* Fermeture de la socket */
 /**************************/
 void fermeture_socket_tcp(int fdSock){

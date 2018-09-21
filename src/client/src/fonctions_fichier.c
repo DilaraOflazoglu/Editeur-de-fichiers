@@ -1,7 +1,6 @@
 #include "fonctions_fichier.h"
 
 
-//OK
 /* Création et Allocation memoire d'une structure fichier */
 /**********************************************************/
 struct fichier *initialiserFichier(){
@@ -56,8 +55,7 @@ void detruire_fichier(){
 }
 
 
-//OK
-/* suppression du repertoire "fichier" créé avec le fichier demandé */
+/* Suppression du repertoire "fichier" créé avec le fichier demandé */
 /********************************************************************/
 void remove_directory(){
 
@@ -110,6 +108,8 @@ void remove_directory(){
 }
 
 
+/* Retour un pointeur de chaine de caractere entierement initialisé a zero */
+/***************************************************************************/
 char *initialiser_buffer(int taille){
 
     int i;

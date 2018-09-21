@@ -1,7 +1,6 @@
 #include "fonctions_ligne.h"
 
 
-//OK
 /* Création et initialisation d'une nouvelle ligne dans la liste fichier->listeligne */
 /*************************************************************************************/
 struct ligneC *nouvelle_ligne(int num, int taille, char *buffer){	//OK
@@ -27,7 +26,6 @@ struct ligneC *nouvelle_ligne(int num, int taille, char *buffer){	//OK
 }
 
 
-//OK
 /* Création dans la liste fichier->ListeligneModif
 Création sans initialisation du buffer __Appel EDITF__  ça parmettera de crérer
 un champs liste et n'allouer le buffer qu'une fois __l'Appel SAVEF__ est reçu */
@@ -76,7 +74,6 @@ void ajouter_ligne(struct liste_ligneC *listemodif,
 }
 
 
-//OK
 /* Cas : Insertion en Queue de liste */
 /* On ajoute 4  dans liste qui contient ligne 0 1 2 3, insertion apres 3 */
 /*************************************************************************/
@@ -88,7 +85,6 @@ void ajout_en_queue(struct liste_ligneC *liste, struct ligneC *new){
 }
 
 
-//OK
 /* Cas : Insertion d'une même ligne */
 /* On ajoute 4  dans liste qui contient ligne 0 1 2 4 */
 /* Insertion d'une nouvelle ligne au num 5 et on decalle les autres */
@@ -117,7 +113,6 @@ void ajout_avec_decalage(struct liste_ligneC *listemodif,
 }
 
 
-//OK
 /* Decalage des numeros des lignes en fonction de l'ajout ou de la suppression */
 /*******************************************************************************/
 void decalage_num(struct liste_ligneC *listemodif,
@@ -148,7 +143,6 @@ void decalage_num(struct liste_ligneC *listemodif,
 }
 
 
-//OK
 /* Fonction est invoquée dans decalage_num, elle permet de verfier
    si les numeros de ligne qu'on decale dans ListeLigne sont presentes
    dans ListeLigneModif pour les decaler aussi ! Elle permet aussi de
@@ -177,7 +171,6 @@ void verif_liste_ligne_modif(struct liste_ligneC *liste,
 }
 
 
-//OK
 /* Traitement d'une sauvegarde d'une ligne existante dans le fichier file */
 /**************************************************************************/
 void sauvegarder_ligne_existante(struct liste_ligneC *listemodif,
@@ -219,7 +212,6 @@ void sauvegarder_ligne_existante(struct liste_ligneC *listemodif,
 }
 
 
-//OK
 /* Lors d'un SAVET (temps reelle) cette methode rempli le buffer de ma ligne*/
 /****************************************************************************/
 void trouver_et_remplir_ligne(int num, int end_offset, char *ecriture){
@@ -243,7 +235,6 @@ void trouver_et_remplir_ligne(int num, int end_offset, char *ecriture){
 }
 
 
-//OK
 /* Lors d'un SAVET (temps reelle) cette methode rempli le buffer d'une ligne USER */
 /**********************************************************************************/
 void sauvegarde_temporaire(struct liste_ligneC *liste, int num,
@@ -268,7 +259,6 @@ void sauvegarde_temporaire(struct liste_ligneC *liste, int num,
 }
 
 
-//OK
 /* Traitement d'ajout d'une ligne non existante dans le fichier file */
 /*********************************************************************/
 void remplir_ligne(struct ligneC *cible, int num, int taille, char *buffer){
@@ -283,7 +273,6 @@ void remplir_ligne(struct ligneC *cible, int num, int taille, char *buffer){
 }
 
 
-//OK
 /* Free de la struct char et de la struct ligne */
 /************************************************/
 void detruire(struct ligneC *ligne){
@@ -295,7 +284,6 @@ void detruire(struct ligneC *ligne){
 }
 
 
-//OK
 /* Suppression d'une ligne du tableau file->tabLigne */
 /* Attention !!!!  Cette fonction est a utliser entre mutex dans une boucle ! */
 /*****************************************************/
@@ -306,7 +294,6 @@ void supprimer_ligne(struct ligneC *ligne){
 }
 
 
-//OK
 /* Suppression d'une ligne des 2 listes chainées de ligne */
 /**********************************************************/
 void suppriession_dans_deux_listes(struct liste_ligneC *listemodif,
@@ -350,7 +337,6 @@ void suppriession_dans_deux_listes(struct liste_ligneC *listemodif,
 }
 
 
-//OK
 /* Retourne le nombre de caractere déjà present dans une ligne existante, 0 sinon */
 /**********************************************************************************/
 int nb_caractere_ligne(struct liste_ligneC *liste, int ligne){
@@ -373,7 +359,6 @@ int nb_caractere_ligne(struct liste_ligneC *liste, int ligne){
 }
 
 
-//OK
 /* Cette fonction Retourne le nombre de  caratere d'une ligne */
 /* strlen sur les carateres speciaux, elle renvoie 2 et non 1 */
 /**************************************************************/
@@ -411,7 +396,6 @@ int nb_caractere_reel_ligne(char *buf){
 }
 
 
-//OK
 /* Retourne 0 si la struct liste_ligneC ne contient pas la struct ligne, 1 sinon */
 /*********************************************************************************/
 int contains_ligne(struct liste_ligneC *liste, int num){
@@ -435,7 +419,6 @@ int contains_ligne(struct liste_ligneC *liste, int num){
 }
 
 
-//OK
 /* Affichage d'une ligne precise */
 /*********************************/
 void display_ligne(struct ligneC *ligne){
@@ -450,7 +433,6 @@ void display_ligne(struct ligneC *ligne){
 }
 
 
-//OK
 /* Affichage de la totalite de la liste de ligne */
 /*************************************************/
 void display_liste(struct liste_ligneC *liste){
@@ -470,7 +452,6 @@ void display_liste(struct liste_ligneC *liste){
 }
 
 
-//OK
 /* Suppression de toutes les lignes de la liste et destruction de la structure */
 /*******************************************************************************/
 void destruction_liste_ligne(struct liste_ligneC *liste){
