@@ -35,6 +35,19 @@ int main (int argc, char* argv []) {
 	initialiser_de_tous_les_fichiers();
 
 
+/* Attente d'une demande de connexion par le client pour l'accepeter */
+	while(1){
+
+		fdSockClientEmission = accepter_connexion(fdSockServerEmission);
+        fdSockClientReception = accepter_connexion(fdSockServerReception);
+
+        struct client *new_c = nouveau_client(fdSockClientEmission,
+        												fdSockClientReception);
+
+        ajouter_client_liste_temporaire(new_c);
+	}
+
+
 /* Fermeture socket Server (listenning) */
 	fermeture_socket_tcp(fdSockServerEmission);
 	fermeture_socket_tcp(fdSockServerReception);
