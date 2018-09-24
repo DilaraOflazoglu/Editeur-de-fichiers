@@ -18,10 +18,18 @@
 #include "fonctions_close.h"
 #include "fonctions_connection.h"
 
+
 int fdSockServer;	
 
+
+/* Fonction principale de GTK */
+/******************************/
 void mainGTK(int fdServer, int argc, char* argv []);
 
+
+/* Fonction qui s'éxecute toutes les 20 secondes, elle verifie l'état de
+l'application pour voir si tout est en ordre, si le thread crée est en vie */
+/***************************************************************************/
 gboolean message_en_vie(gpointer p_text_view);
 
 #endif
