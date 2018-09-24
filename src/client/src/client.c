@@ -8,11 +8,15 @@
 #include "structures.h"
 #include "fonctions_fichier.h"
 #include "fonctions_connection.h"
+#include "fonctions_reception.h"
+#include "fonctions_close.h"
+#include "editeur_gtk.h"
 
 
 
 /* Catch Signal Handler functio */
  void signal_callback_handler(int signum){
+
      printf("Caught signal SIGPIPE %d\n", signum);
 }
 
@@ -29,8 +33,20 @@ int main (int argc, char* argv []) {
 	fichierInfo->fdSockReception = connection(argv[1], argv[2]);
 	fichierInfo->fdSockEmission = connection(argv[1], argv[3]);
 
+	if(pthread_create(&fichierInfo->thread_reception, NULL, reception_reponse,
+		&fichierInfo->fdSockReception) != 0){
+		perror("Main : pb invocation pthread_create \n"); 	exit(EXIT_FAILURE);
+	}
 
-    fermeture_socket_tcp(fichierInfo->fdSockReception);
+   	mainGTK(fichierInfo->fdSockEmission, argc, argv);
+   	printf("Main : fonction maniGTK terminée ! \n");
+
+	if(pthread_join(fichierInfo->thread_reception, NULL) != 0){
+		perror("Main : pb invocation pthread_join \n"); exit(EXIT_FAILURE);
+	}
+
+    printf("Main : Thread_reception terminé !\n");
+
     fermeture_socket_tcp(fichierInfo->fdSockEmission);
     detruire_fichier();
 
