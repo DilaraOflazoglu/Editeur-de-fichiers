@@ -1,7 +1,6 @@
 #include "fonctions_client.h"
 
 
-//OK
 /* Création et initialisation d'un nouveau pointeur de client */
 /**************************************************************/
 struct client *nouveau_client(int fdEmission, int fdReception){
@@ -60,7 +59,6 @@ error_malloc_client :
 }
 
 
-//OK
 /* Ajouter un client à la liste chainé */
 /***************************************/
 void ajouter_client_dans_fichier(struct fichier *file, struct client *new_clt){
@@ -79,7 +77,6 @@ void ajouter_client_dans_fichier(struct fichier *file, struct client *new_clt){
 }
 
 
-//OK
 /* Ajouter un client à la liste chainé temporaire */
 /**************************************************/
 void ajouter_client_liste_temporaire(struct client *new_clt){
@@ -119,7 +116,6 @@ void verif_en_cours_dedition_client(struct fichier *file, int clientNonConcerne,
 }
 
 
-//OK
 /* Ajouter un client à la liste chainé temporaire */
 /**************************************************/
 void supprimer_client_liste_temporaire(struct client *new_clt){
@@ -129,7 +125,6 @@ void supprimer_client_liste_temporaire(struct client *new_clt){
 }
 
 
-//OK
 /* Supprimer un client du tableau */
 /**********************************/
 void supprimer_client(struct client *clt){
@@ -142,9 +137,9 @@ void supprimer_client(struct client *clt){
 }
 
 
-//OK
+
 /* Free la mémoire du pointeur d'un client */
-/**********************************************/
+/*******************************************/
 void detruire_client(struct client *clt){
 
 /* Buffer ligne supprimé dans la fonction "attente_signal_commande" du thread emission */
@@ -191,7 +186,6 @@ void detruire_client(struct client *clt){
 }
 
 
-//OK
 /* Affichage de tous les clients */
 /*********************************/
 void display(struct fichier *file){

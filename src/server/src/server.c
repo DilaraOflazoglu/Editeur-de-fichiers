@@ -14,7 +14,7 @@
 #include "fonctions_thread_reception.h"
 
 
-/* Catch Signal Handler functio */
+/* Catch Signal Handler function */
  void signal_callback_handler(int signum){
      printf("Caught signal SIGPIPE %d\n", signum);
 }
