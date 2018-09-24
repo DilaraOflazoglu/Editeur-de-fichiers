@@ -10,6 +10,8 @@
 #include "structures.h"
 #include "fonctions_fichier.h"
 #include "fonctions_connection.h"
+#include "fonctions_thread_emission.h"
+#include "fonctions_thread_reception.h"
 
 
 /* Catch Signal Handler functio */
@@ -45,6 +47,15 @@ int main (int argc, char* argv []) {
         												fdSockClientReception);
 
         ajouter_client_liste_temporaire(new_c);
+
+        /* Création du thread qui envoie le fichier */
+        if(pthread_create(&new_c->thread_reception, NULL, reception, (void*)new_c)){
+            perror("Main : pb invocation pthread_create \n");  exit(EXIT_FAILURE);
+        }
+
+        if(pthread_create(&new_c->thread_emission, NULL, emission, (void*)new_c)){
+            perror("Main : pb invocation pthread_create \n");  exit(EXIT_FAILURE);
+        }
 	}
 
 

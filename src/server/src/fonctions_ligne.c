@@ -1,6 +1,7 @@
 #include "fonctions_ligne.h"
 
 
+//OK
 /* Création et initialisation d'une nouvelle ligne dans la liste fichier->listeligne */
 /*************************************************************************************/
 struct ligneS *nouvelle_ligne(int num, int taille, char *buffer){	//OK
@@ -25,6 +26,7 @@ struct ligneS *nouvelle_ligne(int num, int taille, char *buffer){	//OK
 }
 
 
+//OK
 /* Attention !!! Verrou pris dans la fonction commande_edit_Em */
 /* Création dans la liste fichier->ListeligneModif
 Création sans initialisation du buffer __Appel EDITF__  ça parmettera de crérer
@@ -50,6 +52,7 @@ void nouvelle_ligne_vide(struct liste_ligneS *liste, int num){
 }
 
 
+//OK
 /* Ajout d'une ligne dans la liste de ligne precisé */
 /****************************************************/
 void ajouter_ligne(struct fichier *file, int fdClient, struct ligneS *new){
@@ -74,6 +77,7 @@ void ajouter_ligne(struct fichier *file, int fdClient, struct ligneS *new){
 }
 
 
+//OK
 /* Cas : Insertion en Queue de liste */
 /* On ajoute 4  dans liste qui contient ligne 0 1 2 3, insertion apres 3 */
 /*************************************************************************/
@@ -86,6 +90,7 @@ void ajout_en_queue(struct liste_ligneS *liste, struct ligneS *new){
 }
 
 
+//OK
 /* Cas : Insertion d'une même ligne */
 /* On ajoute 4  dans liste qui contient ligne 0 1 2 4 */
 /* Insertion d'une nouvelle ligne au num 4 et on decalle les autres */
@@ -112,6 +117,7 @@ void ajout_avec_decalage(struct fichier *file, int fdClient, struct ligneS *new)
 }
 
 
+//OK
 /* Decalage des numeros des lignes en fonction de l'ajout ou de la suppression */
 /*******************************************************************************/
 void decalage_num(struct fichier *file, int fdClient,
@@ -145,6 +151,7 @@ void decalage_num(struct fichier *file, int fdClient,
 }
 
 
+//OK
 /* Fonction est invoquée dans decalage_num, elle permet de verfier
    si les numeros de ligne qu'on decale dans ListeLigne sont presentes
    dans ListeLigneModif pour les decaler aussi ! Elle permet aussi de
@@ -168,6 +175,7 @@ void verif_liste_ligne_modif(struct liste_ligneS *listeModif,
 }
 
 
+//OK
 /* Traitement d'une sauvegarde d'une ligne existante dans le fichier file */
 /**************************************************************************/
 void sauvegarder_ligne_existante(struct liste_ligneS *listemodif,
@@ -209,6 +217,7 @@ void sauvegarder_ligne_existante(struct liste_ligneS *listemodif,
 }
 
 
+//OK
 /* Enregistrement en temps réelle dans la liste de ligne */
 /*********************************************************/
 void sauvegarde_temporaire(struct liste_ligneS *liste, int num,
@@ -257,6 +266,7 @@ void remplir_cache(struct liste_ligneS *liste, struct client *clt, int num){
 }
 
 
+//OK
 /* Traitement d'ajout d'une ligne non existante dans le fichier file */
 /*********************************************************************/
 void remplir_ligne(struct ligneS *cible,
@@ -277,6 +287,7 @@ void remplir_ligne(struct ligneS *cible,
 }
 
 
+//OK
 /* Free de la struct char et de la struct ligne */
 /************************************************/
 void detruire(struct ligneS *ligne){
@@ -287,6 +298,7 @@ void detruire(struct ligneS *ligne){
 }
 
 
+//OK
 /* Suppression d'une ligne du tableau file->tabLigne */
 /* Attention !!!!  Cette fonction est a utliser entre mutex dans une boucle ! */
 /******************************************************************************/
@@ -296,6 +308,7 @@ void supprimer_ligne(struct ligneS *ligne){
 }
 
 
+//OK
 /* Preparation du message d'une suppression de ligne a tous les utilisateurs */
 /*****************************************************************************/
 void suppriession_dans_deux_listes(struct fichier *file, int fdClient, int num_ligne){
@@ -333,6 +346,7 @@ void suppriession_dans_deux_listes(struct fichier *file, int fdClient, int num_l
 }
 
 
+//OK
 /* Retourne 0 si la struct liste_ligneS ne contient pas la struct ligne, 1 sinon */
 /*********************************************************************************/
 int contains_ligne(struct liste_ligneS *liste, int num){
@@ -356,6 +370,7 @@ int contains_ligne(struct liste_ligneS *liste, int num){
 }
 
 
+//OK
 /* Affichage d'une ligne precise */
 /*********************************/
 void display_ligne(struct ligneS *ligne){
@@ -370,6 +385,7 @@ void display_ligne(struct ligneS *ligne){
 }
 
 
+//OK
 /* Affichage de la totalite de la liste de ligne */
 /*************************************************/
 void display_liste(struct liste_ligneS *liste){
@@ -387,6 +403,7 @@ void display_liste(struct liste_ligneS *liste){
 	}
 	pthread_mutex_unlock(&liste->mutexListeLigne);
 }
+
 
 
 /* Suppression de toutes les lignes de la liste et destruction de la structure */

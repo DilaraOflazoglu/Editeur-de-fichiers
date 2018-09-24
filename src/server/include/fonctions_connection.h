@@ -13,19 +13,10 @@
 #include <netdb.h>
 #include <sys/un.h>
 
-
-/* Fonction appelé pour créer une socket */
-/*****************************************/
 int creer_socket_tcp(char *chainePort);
 
-
-/* Fonction appelé pour accepter une connexion cliente */
-/*******************************************************/
 int accepter_connexion(int fdSockServer); /* Par le serveur  */
 
-
-/* Fonction appelé pour fermer une socket */
-/*******************************************/
 void fermeture_socket_tcp(int fdSock);
 
 #endif
