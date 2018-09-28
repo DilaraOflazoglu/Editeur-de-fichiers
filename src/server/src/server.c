@@ -35,6 +35,10 @@ int main (int argc, char* argv []) {
 	signal(SIGPIPE, signal_callback_handler);
 
 	initialiser_de_tous_les_fichiers();
+	
+	if(pthread_create(&thread_check, NULL, check, NULL) != 0){
+		perror("pb invocation pthread_create \n");	exit(EXIT_FAILURE);
+	}
 
 
 /* Attente d'une demande de connexion par le client pour l'accepeter */
@@ -56,6 +60,11 @@ int main (int argc, char* argv []) {
         if(pthread_create(&new_c->thread_emission, NULL, emission, (void*)new_c)){
             perror("Main : pb invocation pthread_create \n");  exit(EXIT_FAILURE);
         }
+	}
+	
+	
+	if(pthread_join(thread_check, NULL) != 0){
+		perror("pb invocation pthread_join \n"); exit(EXIT_FAILURE);
 	}
 
 
