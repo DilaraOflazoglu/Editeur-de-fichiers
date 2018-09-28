@@ -1,7 +1,6 @@
 #include "fonctions_thread_check.h"
 
 
-//OK
 /* Parcours de chaque fichier puis attente de "15 secondes" */
 /************************************************************/
 void *check(){
@@ -19,7 +18,6 @@ void *check(){
 }
 
 
-//OK
 /* Parcours de liste chainée pour supprimer les clients déconnectés */
 /********************************************************************/
 void check_one_file(struct fichier *file){
@@ -75,7 +73,6 @@ void check_one_file(struct fichier *file){
 }
 
 
-//OK
 /* Parcours de liste chainée temporaire pour supprimer les clients déconnectés */
 /*******************************************************************************/
 void check_liste_temporaire(){
@@ -136,7 +133,6 @@ void check_liste_temporaire(){
 }
 
 
-//OK
 /* Suppression d'un client de la liste des clients qui est tombé en panne */
 /* Verification que le client n'est pas en cours d'édition sinon on envoie
 	un message d'annulation a tous les autres clients */
