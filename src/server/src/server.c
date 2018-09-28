@@ -39,6 +39,10 @@ int main (int argc, char* argv []) {
 	if(pthread_create(&thread_check, NULL, check, NULL) != 0){
 		perror("pb invocation pthread_create \n");	exit(EXIT_FAILURE);
 	}
+	
+	if(pthread_create(&thread_broadcast, NULL, broadcast, &liste_file) != 0){
+		perror("pb invocation pthread_create \n"); exit(EXIT_FAILURE);
+	}
 
 
 /* Attente d'une demande de connexion par le client pour l'accepeter */
@@ -64,6 +68,10 @@ int main (int argc, char* argv []) {
 	
 	
 	if(pthread_join(thread_check, NULL) != 0){
+		perror("pb invocation pthread_join \n"); exit(EXIT_FAILURE);
+	}
+	
+	if(pthread_join(thread_broadcast, NULL) != 0){
 		perror("pb invocation pthread_join \n"); exit(EXIT_FAILURE);
 	}
 
