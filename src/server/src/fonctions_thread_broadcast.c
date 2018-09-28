@@ -1,7 +1,6 @@
 #include "fonctions_thread_broadcast.h"
 
 
-//OK
 /* Fonction principal du thread BROADCAST */
 /******************************************/
 void *broadcast(void *arg){
@@ -66,7 +65,6 @@ void *broadcast(void *arg){
 }
 
 
-//OK
 /* Insertion de ligne */
 /**********************/
 void commande_insert_BR(struct fichier *file, int fdClient, int num_ligne){
@@ -92,7 +90,6 @@ void commande_insert_BR(struct fichier *file, int fdClient, int num_ligne){
 }
 
 
-//OK
 /* Preparation du message d'une nouvelle edition a tous les utilisateurs */
 /*************************************************************************/
 void commande_edit_BR(struct fichier *file, int fdClient, int num_ligne){
@@ -111,7 +108,6 @@ void commande_edit_BR(struct fichier *file, int fdClient, int num_ligne){
 }
 
 
-//OK
 /* Preparation du message d'une annulation d'edition a tous les utilisateurs */
 /*****************************************************************************/
 void commande_annul_BR(struct fichier *file, int fdClient, int num_ligne){
@@ -131,7 +127,6 @@ void commande_annul_BR(struct fichier *file, int fdClient, int num_ligne){
 }
 
 
-//OK
 /* Preparation du message d'une suppression de ligne a tous les utilisateurs */
 /*****************************************************************************/
 void commande_delete_BR(struct fichier *file, int fdClient, int num_ligne){
@@ -156,7 +151,6 @@ void commande_delete_BR(struct fichier *file, int fdClient, int num_ligne){
 }
 
 
-//OK
 /* Preparation du message d'une sauvegarde d'edition a tous les utilisateurs */
 /*****************************************************************************/
 void commande_save_BR(struct fichier *file, int fdClient,
@@ -213,7 +207,8 @@ void commande_save_BR(struct fichier *file, int fdClient,
 }
 
 
-
+/* Envoie d'un message SAVE --> Modification du contenu de la ligne sans ajout */
+/*******************************************************************************/
 void sauvegarde_taille_zero(struct fichier *file, int num_ligne, int tmp){
 
 	char *buffer_envoie = NULL;
@@ -249,7 +244,6 @@ void sauvegarde_taille_zero(struct fichier *file, int num_ligne, int tmp){
 }
 
 
-//OK
 /* Attention !! Cette methode n'est utilisée que dans commande_save_BR et
  verrou de "listeLigneModif" est pris avant l'invocation de cette methode */
 /* Redimensionner le buffer afin de créer des lignes de 80 caracteres maximum */
@@ -370,7 +364,6 @@ void redimensionner_ligne_BR(struct fichier *file,  int fdClient,
 }
 
 
-//OK
 /* Attention !! Cette methode n'est utilisée que dans redimensionner_ligne_BR
  	et le verrou de "listeLigneModif" est pris avant l'invocation de la
  	methode redimensionner_ligne_BR */
@@ -408,7 +401,6 @@ void preparation_broadcast_save(struct fichier *file,  int fdClient, int num_lig
 }
 
 
-//OK
 /* À Utiliser pour les Commandes EDITF et ANNUL */
 /* Envoie d'une MàJ à tous les utilisateurs sauf à celui qui l'a déclenché */
 /***************************************************************************/
@@ -437,7 +429,6 @@ void broadcast_info_without(struct fichier *file, int fdClient, char *envoieMess
 }
 
 
-//OK
 /* À Utiliser pour les Commandes SAVEF et DELET */
 /* Envoie d'une mise à jour à tous les utilisateurs */
 /****************************************************/
@@ -464,7 +455,6 @@ void broadcast_info_All(struct fichier *file, char *envoieMess){
 }
 
 
-//OK
 /* On remplie la struct commande du thread Broadcast pour lui signaler une commande */
 /************************************************************************************/
 char *attente_signal_commande(struct liste_fichier *file, int *fdClient, int *ligne,
@@ -504,7 +494,6 @@ char *attente_signal_commande(struct liste_fichier *file, int *fdClient, int *li
 }
 
 
-//OK
 /* Fonction utiliser par le thread Emission et Reception
 pour signaler une nouvelle commande au thread BROADCASt */
 /********************************************************/
