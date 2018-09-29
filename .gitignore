@@ -1,6 +1,12 @@
 # IDE configuration file
 .idea/
 
+#binaire et .o
+src/client/bin
+src/server/bin
+src/client/obj
+src/server/obj
+
 # Prerequisites
 *.d
 
