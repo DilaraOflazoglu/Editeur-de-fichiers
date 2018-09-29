@@ -8,9 +8,11 @@
 #include <fcntl.h>
 #include <pthread.h>
 #include "structures.h"
-#include "fonctions_fichier.h"
+#include "fonctions_client.h"
 #include "fonctions_connection.h"
+#include "fonctions_thread_check.h"
 #include "fonctions_thread_emission.h"
+#include "fonctions_thread_broadcast.h"
 #include "fonctions_thread_reception.h"
 
 
