@@ -7,17 +7,17 @@ Language C. UI : GTK API.
 
 # BUILDING
 	-	git clone https://github.com/DilaraOflazoglu/Editeur-de-fichiers.git
-	-	cd Editeur-de-fichiers/src <br />
+	-	cd Editeur-de-fichiers/src
 	
 	
 # Server Code
-	-	cd server <br />
+	-	cd server
 Launch the server:  <br />
 	-	make test-server 
 	-	OR make THEN ./bin/server Socket_Port_1 Socket_Port_2, Socket Port numbers must be greater than 1024)  <br />
 
 # Client Code
-	-	cd client <br />
+	-	cd client
 Launch the client:  <br />
 	-	make test-client <br />
 	-	OR make THEN ./bin/client Socket_Port_1 Socket_Port_2, Socket Port numbers must be greater than 1024)  <br /> <br />
