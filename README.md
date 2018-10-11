@@ -14,15 +14,17 @@ Language C. UI : GTK API.
 	-	cd server
 Launch the server:  <br />
 &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp;make test-server <br />
-&nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp;OR make THEN ./bin/server Socket_Port_1 Socket_Port_2, Socket Port numbers must be greater than 1024)  <br />
+&nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp;OR make THEN ./bin/server Socket_Port_1 Socket_Port_2 <br />
 
 # Client Code
 	-	cd client
 Launch the client:  <br />
 &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp;make test-client <br />
-&nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp;OR make THEN ./bin/client Socket_Port_1 Socket_Port_2, Socket Port numbers must be greater than 1024)  <br /> <br />
+&nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp;OR make THEN ./bin/client Socket_Port_1 Socket_Port_2 <br /> <br />
 	
-NOTE : CLIENT Socket_Port_1 (or 2) and SERVER Socket_Port_1 (or 2) must be the same. <br />
+NOTE 1 : CLIENT Socket_Port_1 and SERVER Socket_Port_1 must be the same. <br />
+NOTE 2 : CLIENT Socket_Port_2 and SERVER Socket_Port_2 must be the same. <br /> 
+NOTE 3 : Socket Port numbers must be greater than 1024
 
 # FEATURES
 	
