@@ -36,4 +36,4 @@ NOTE 3 : Socket Port numbers must be greater than 1024 <br />
 	
 	
 # USER INTERFACE
-![alt text](images/file_editor_design.png)
+<img src="images/file_editor_design.png" width="400" height="400"/>
