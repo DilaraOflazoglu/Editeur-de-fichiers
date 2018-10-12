@@ -29,8 +29,8 @@ NOTE 3 : Socket Port numbers must be greater than 1024 <br />
 
 # FEATURES
 &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp; Chose a file provided by the server and Open it on User Interface <br />
-&nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp; Edit this file <br />
-&nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp; Get all other Users modifications of file in Real-Time <br />
+&nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp; Multiple users can edit this file at the same time <br />
+&nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp; Get all other Users modifications of this file in Real-Time <br />
 &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp; One user can edit one line at the same time <br />
 &nbsp; &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp; Different Users can not edit the same line, to respect the consistency <br />
 	
